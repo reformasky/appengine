@@ -1,9 +1,15 @@
 application: reformasky01
 version: 1
 runtime: python27
+
 api_version: 1
 threadsafe: true
 
 handlers:
 - url: /.*
-  script: reformasky01.application
+  script: resovle.application
+
+
+libraries:
+- name: jinja2
+  version: latest

@@ -21,4 +21,4 @@ class MainPage(Handler):
         self.render("front.html", title= title, art= art, error= error)
     def get(self):
         self.render_front()
-app= webapp2.WSGIApplication([('/', MainPage)],debug = True)
+app= webapp2.WSGIApplication([r'/', MainPage], debug= True)
