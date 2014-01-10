@@ -21,4 +21,12 @@ class MainPage(Handler):
         self.render("front.html", title= title, art= art, error= error)
     def get(self):
         self.render_front()
-app= webapp2.WSGIApplication([('/', MainPage)],debug = True)
+    def post(self):
+        r = self.request
+        title  = r.get('title')
+        art = r.get('art')
+        error = ''
+        if not (title and art):
+            error = "Sorry, something is missing"
+        self.render_front(title, art, error)
+application= webapp2.WSGIApplication([('/', MainPage)],debug = True)
