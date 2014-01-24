@@ -1,0 +1,57 @@
+<DOCTYPE! html>
+
+<html>
+<head>
+	<title>Please input a new entry</title>
+</head>
+
+<style type="text/css">
+	body{
+		font-family: sans-serif;
+		width: 1200px;
+		margin: 0 auto;
+	}
+	.error{
+		color: red
+	}
+
+	label{
+		display: block;
+		font-size: 20px;
+	}
+	input{
+		width: 1200px;
+		font-size:20px;
+		
+	}
+	textarea{
+		width: 1200px;
+		height: 400px;
+		font-size: 17px;
+		font-family: monospace;
+	}
+	input[type = submit]{
+		font-size: 24px;
+	}
+	hr{
+		margin: 20px auto;
+	}
+</style>
+<body>
+	<h1>New Blog</h1>
+
+	<form method ="post">
+		<label>
+			<div>subject</div>
+			<input type ="text" name = "subject" value = "{{subject}}">
+		</label>
+
+		<label>
+			<div>content</div>
+			<textarea name = "content">{{content}}</textarea>
+		</label>
+		<div class= 'error'>{{error}}</div>
+		<input type ='submit'>
+	</form>		
+</body>
+</html>

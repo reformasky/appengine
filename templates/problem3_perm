@@ -1,0 +1,53 @@
+<DOCTYPE! html>
+
+<html>
+<head>
+	<title>Udacity Blog 3</title>
+</head>
+
+<style type="text/css">
+	body{
+		font-family: sans-serif;
+		width: 800px;
+		margin: 0 auto;
+		padding: 10px;
+	}
+	.error{
+		color: red
+	}
+
+	label{
+		display: block;
+		font-size: 20px;
+	}
+	
+	hr{
+		margin: 5px auto;
+	}
+	.Blog + .Blog{
+		margin-top: 20px; 
+	}
+	.Blog-subject{
+		font-weight: bold;
+		font-size: 22px;
+	}
+	.Blog-created{
+		font-size:12px;
+	}
+	.Blog-content{
+		margin: 0;
+		font-size: 20px;
+	}
+</style>
+<body>
+	<h1>Blog</h1>
+
+	<div class= 'Blog'>	
+		<div class= 'Blog-subject'>{{p.subject}}</div>
+		<div class= 'Blog-created'>{{p.created.strftime("%A, %d. %B %Y %I:%M%p")}}</div>
+		<hr>
+		<pre class= 'Blog-content'>{{p.content}}</pre>
+	</div>
+
+</body>
+</html>

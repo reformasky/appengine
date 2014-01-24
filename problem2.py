@@ -160,6 +160,6 @@ class ThanksHandler(PWD):
         
         
         
-application = webapp2.WSGIApplication([
+application = webapp2.WSGIApplication([('/', MainPage),
     ('/pwd', PWD),('/thanks', ThanksHandler)
 ], debug=True)
