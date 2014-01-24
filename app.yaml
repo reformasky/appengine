@@ -7,7 +7,11 @@ threadsafe: true
 
 handlers:
 - url: /.*
+<<<<<<< HEAD
   script: problem3.application
+=======
+  script: reformasky01.application
+>>>>>>> cd78c30cc7d40a80d517ec9bb2eeb14e96548e88
 
 
 libraries:
