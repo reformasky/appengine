@@ -243,6 +243,7 @@ class Flush(Handler):
 
 
 
+
 application = webapp2.WSGIApplication([('/([0-9]+)/?', Perm),
 									   ('/newpost/?', NewPost),
 									   ('/', MainPage),
